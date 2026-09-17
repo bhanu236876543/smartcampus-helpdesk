@@ -1,0 +1,146 @@
+# SmartCampus Helpdesk
+
+## Week 5 Task: Testing Strategy & Quality Assurance Plan
+
+### 1. Objective
+
+The objective of this testing strategy is to define a systematic approach for validating the SmartCampus Helpdesk application. Testing ensures that the system works according to the requirements, provides reliable responses to users, protects data, and performs efficiently before deployment.
+
+The testing process will identify defects early, reduce maintenance costs, improve user satisfaction, and ensure that the application meets functional and quality standards.
+
+### 2. Overview of the Testing Lifecycle
+
+The testing lifecycle will follow these stages:
+
+1. **Requirement Analysis:** Identify the features and requirements that need to be tested.
+2. **Test Planning:** Define the testing scope, resources, tools, responsibilities, and schedule.
+3. **Test Case Design:** Prepare test scenarios and expected results.
+4. **Test Environment Setup:** Configure the application, database, and required tools.
+5. **Test Execution:** Run test cases and compare actual results with expected results.
+6. **Defect Reporting:** Record bugs with details such as severity, steps to reproduce, and screenshots.
+7. **Retesting and Regression Testing:** Verify bug fixes and ensure that existing features continue to work.
+8. **Test Closure:** Prepare a final testing report and confirm whether the application is ready for release.
+
+### 3. Testing Phases
+
+#### 3.1 Unit Testing
+
+Unit testing focuses on testing individual functions, methods, and components separately. For SmartCampus Helpdesk, unit tests may validate login validation, ticket creation, ticket status updates, input validation, and search functions.
+
+The main purpose is to ensure that each small component works correctly before it is combined with other components.
+
+#### 3.2 Integration Testing
+
+Integration testing verifies whether different modules work correctly together. For example, it can test the connection between the frontend ticket form, backend API, and database.
+
+Integration testing should verify that data submitted by a student is correctly received by the server, stored in the database, and displayed in the user interface.
+
+#### 3.3 System Testing
+
+System testing evaluates the complete SmartCampus Helpdesk application as a whole. It includes testing user registration, login, ticket creation, ticket assignment, ticket tracking, notifications, and administrative functions.
+
+This phase checks whether the complete application satisfies the functional and non-functional requirements.
+
+#### 3.4 User Acceptance Testing
+
+User Acceptance Testing, or UAT, verifies whether the application meets the practical needs of its intended users. Students, faculty members, and administrators can participate in this phase.
+
+Typical UAT scenarios include submitting a helpdesk complaint, checking ticket progress, responding to a ticket, and closing a resolved issue.
+
+### 4. Testing Types
+
+The following testing types will be used:
+
+* **Functional Testing:** Verifies whether each feature works according to requirements.
+* **Usability Testing:** Checks whether users can easily understand and navigate the system.
+* **Performance Testing:** Measures response time and system behavior under multiple users.
+* **Security Testing:** Checks authentication, authorization, input validation, and data protection.
+* **Compatibility Testing:** Ensures that the application works across different browsers and devices.
+* **Regression Testing:** Confirms that new changes do not break existing features.
+* **Validation Testing:** Ensures that incorrect or incomplete inputs are handled properly.
+
+### 5. Testing Methodologies
+
+#### Test-Driven Development
+
+In Test-Driven Development, developers first write a test, then implement the feature, and finally improve the code. This approach helps ensure that each function has clear expected behavior.
+
+#### Behavior-Driven Development
+
+Behavior-Driven Development describes application behavior using simple, understandable scenarios. For example:
+
+* Given a registered student is logged in
+* When the student submits a helpdesk ticket
+* Then the ticket should be created successfully
+
+#### Manual Testing
+
+Manual testing will be used for usability, exploratory testing, and user acceptance testing. Testers will interact with the application and record unexpected behavior.
+
+#### Automated Testing
+
+Automated tests will be used for repetitive tasks such as login validation, API testing, form validation, and regression testing.
+
+### 6. Recommended Tools
+
+The following tools may be used during the testing process:
+
+* **Jest:** For testing JavaScript functions and backend components.
+* **JUnit:** For Java-based unit testing if Java services are introduced.
+* **Selenium:** For browser-based user interface testing.
+* **Postman:** For testing backend APIs and HTTP requests.
+* **Cypress:** For end-to-end frontend testing.
+* **GitHub Issues:** For recording and tracking defects.
+* **Browser Developer Tools:** For checking console errors, network requests, and frontend behavior.
+
+### 7. Sample Test Cases
+
+| Test Case ID | Scenario               | Steps                                         | Expected Result                                                   |
+| ------------ | ---------------------- | --------------------------------------------- | ----------------------------------------------------------------- |
+| TC-01        | Student login          | Enter valid credentials and click Login       | Student is successfully logged in and redirected to the dashboard |
+| TC-02        | Invalid login          | Enter incorrect credentials                   | An appropriate error message is displayed                         |
+| TC-03        | Create helpdesk ticket | Enter issue details and submit the form       | A new ticket is created and a ticket ID is generated              |
+| TC-04        | Empty ticket form      | Submit the form without required details      | Validation messages are displayed                                 |
+| TC-05        | Update ticket status   | Administrator changes ticket status           | Updated status is displayed to the student                        |
+| TC-06        | Unauthorized access    | Student tries to access an administrator page | Access is denied                                                  |
+
+### 8. Quality Assurance Plan
+
+Quality assurance will be performed throughout the development lifecycle rather than only before deployment. Developers and testers will follow coding standards, review changes, maintain test cases, and verify every completed feature.
+
+All reported defects should include:
+
+* Defect title
+* Description of the problem
+* Steps to reproduce
+* Expected result
+* Actual result
+* Severity and priority
+* Screenshot or error log
+* Assigned developer
+* Current status
+
+Defects may be categorized as Critical, High, Medium, or Low. After a developer fixes a defect, the tester will retest it and perform regression testing on related features.
+
+### 9. Feedback and Continuous Improvement
+
+Feedback will be collected from students, faculty members, administrators, testers, and project reviewers. The feedback will be reviewed regularly to identify usability problems, missing requirements, and possible improvements.
+
+The team will use short testing cycles, code reviews, issue tracking, and regular progress meetings to improve product quality. Lessons learned from each testing cycle will be documented and applied to future development activities.
+
+### 10. Entry and Exit Criteria
+
+Testing can begin when the required feature is implemented, the test environment is available, and test data has been prepared.
+
+Testing can be considered complete when:
+
+* All planned test cases have been executed
+* Critical and high-severity defects are resolved
+* Major features work as expected
+* Regression testing is completed
+* User acceptance feedback is reviewed
+* The final testing report is prepared
+
+### 11. Conclusion
+
+This testing strategy provides a structured approach for validating the SmartCampus Helpdesk application. By combining unit, integration, system, acceptance, manual, and automated testing, the project team can identify defects early and deliver a reliable, secure, and user-friendly system. Continuous feedback, proper bug tracking, and regression testing will support continuous improvement and help ensure that the application is ready for deployment.
